@@ -11,12 +11,11 @@
   <!-- Header / Navbar -->
   <header>
     <nav class="nav-items">
-      <img class="nav-img" src="assets/images/logo.svg" alt="Snap Logo" />
+      <img class="logo" src="assets/images/logo.svg" alt="Snap Logo" />
 
-     
-      <ul >
+      <ul>
         <li class="dropdown-parent">
-          Features 
+          <a href="#" class="nav-link">Features</a>
           <span class="arrow-icons">
             <img src="assets/images/icon-arrow-down.svg" class="arrow-down" />
             <img src="assets/images/icon-arrow-up.svg" class="arrow-up" />
@@ -28,9 +27,8 @@
             <li><img src="assets/images/icon-planning.svg" alt="Planning Icon" />Planning</li>
           </ul>
         </li>
-      
         <li class="dropdown-parent">
-          Company 
+          <a href="#" class="nav-link">Company</a>
           <span class="arrow-icons">
             <img src="assets/images/icon-arrow-down.svg" class="arrow-down" />
             <img src="assets/images/icon-arrow-up.svg" class="arrow-up" />
@@ -41,13 +39,9 @@
             <li>Blog</li>
           </ul>
         </li>
-      
-        <li>Careers</li>
-        <li>About</li>
+        <li><a href="#" class="nav-link">Careers</a></li>
+        <li><a href="#" class="nav-link">About</a></li>
       </ul>
-      
-      
-      
 
       <div class="registration">
         <button class="loginbutton">Login</button>
@@ -55,7 +49,7 @@
       </div>
 
       <!-- Hamburger Icon -->
-      <div class="menu-icon" onclick="openMenu()">
+      <div class="open-menu" onclick="openMenu()">
         <img src="assets/images/icon-menu.svg" alt="Menu Icon" />
       </div>
     </nav>
@@ -67,11 +61,7 @@
       </div>
       <ul>
         <li class="dropdown-parent">
-          Features 
-          <span class="arrow-icons">
-            <img src="assets/images/icon-arrow-down.svg" class="arrow-down" />
-            <img src="assets/images/icon-arrow-up.svg" class="arrow-up" />
-          </span>
+          <a href="#" class="nav-link">Features</a>
           <ul class="dropdown">
             <li><img src="assets/images/icon-todo.svg" alt="Todo Icon" />Todo</li>
             <li><img src="assets/images/icon-calendar.svg" alt="Calendar Icon" />Calendar</li>
@@ -79,24 +69,16 @@
             <li><img src="assets/images/icon-planning.svg" alt="Planning Icon" />Planning</li>
           </ul>
         </li>
-      
         <li class="dropdown-parent">
-          Company 
-          <span class="arrow-icons">
-            <img src="assets/images/icon-arrow-down.svg" class="arrow-down" />
-            <img src="assets/images/icon-arrow-up.svg" class="arrow-up" />
-          </span>
+          <a href="#" class="nav-link">Company</a>
           <ul class="dropdown">
             <li>History</li>
             <li>Our Team</li>
             <li>Blog</li>
           </ul>
         </li>
-        <li>Careers</li>
-        <br/>
-        <li>About</li>
-      
-        
+        <li><a href="#" class="nav-link">Careers</a></li>
+        <li><a href="#" class="nav-link">About</a></li>
       </ul>
       <div class="registration mobile">
         <button class="loginbutton">Login</button>
@@ -108,8 +90,7 @@
   <!-- Main Content -->
   <main>
     <div class="left-section">
-      <h1 class="text-content">Make remote
-         work</h1>
+      <h1 class="text-content">Make remote work</h1>
       <p class="text-content">
         Get your team in sync, no matter your location. Streamline 
         processes, create team rituals, and watch productivity soar.
@@ -125,11 +106,13 @@
     </div>
 
     <div class="right-section">
-      <img class="hero-img" src="assets/images/image-hero-desktop.png" alt="Hero Image" />
+      <picture>
+        <source media="(max-width: 768px)" srcset="assets/images/image-hero-mobile.png" />
+        <img src="assets/images/image-hero-desktop.png" alt="Hero Image" />
+      </picture>
     </div>
   </main>
 
-  <!-- Footer -->
   <footer>
     <div class="attribution">
       Challenge by <a href="https://crio.do" target="_blank">crio.do</a>. 
@@ -137,9 +120,6 @@
     </div>
   </footer>
 
-  <!-- JavaScript -->
-  <script src="index.js" />
-    
-
+  <script src="index.js"></script>
 </body>
 </html>
