@@ -176,14 +176,14 @@ main {
   margin-bottom: 20px;
 }
 
-h1.text-content {
+.text-content h1 {
   white-space: pre-line;
   font-size: 36px;
   font-weight: bold;
   text-align: left;
 }
 
-p.text-content {
+.text-content p{
   white-space: pre-line;
   font-size: 16px;
   color: #555;
@@ -235,6 +235,16 @@ p.text-content {
   box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
   z-index: 1000;
 }
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 999;
+}
+
 
 .mobile-menu .close-btn {
   display: flex;

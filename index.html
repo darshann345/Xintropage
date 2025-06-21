@@ -11,7 +11,7 @@
   <!-- Header / Navbar -->
   <header>
     <nav class="nav-items">
-      <img class="logo" src="assets/images/logo.svg" alt="Snap Logo" />
+<img class="logo" src="assets/images/logo.svg" alt="snap's logo" />
 
       <ul>
         <li class="dropdown-parent">
@@ -56,9 +56,12 @@
 
     <!-- Mobile Slide-in Menu -->
     <div id="mobile-menu" class="mobile-menu">
-      <div class="close-btn" onclick="closeMenu()">
-        <img src="assets/images/icon-close-menu.svg" alt="Close Icon" />
-      </div>
+        <div class="overlay" onclick="closeMenu()">
+            <img src="assets/images/icon-close-menu.svg" alt="Close Icon" />
+        </div>
+
+      <!-- <div class="close-btn" onclick="closeMenu()">
+      </div> -->
       <ul>
         <li class="dropdown-parent">
           <a href="#" class="nav-link">Features</a>
@@ -90,11 +93,15 @@
   <!-- Main Content -->
   <main>
     <div class="left-section">
-      <h1 class="text-content">Make remote work</h1>
-      <p class="text-content">
+        <div>
+  <h1>Make remote work</h1>
+        <p>
         Get your team in sync, no matter your location. Streamline 
         processes, create team rituals, and watch productivity soar.
       </p>
+</div>
+
+
       <button class="btn">Learn More</button>
 
       <div class="clients">
