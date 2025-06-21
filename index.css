@@ -1,0 +1,516 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+.nav-items {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-items ul {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+}
+ul{
+  list-style: none;
+  background-color: white
+}
+ul li{
+  display: inline-block;
+  position: relative;
+
+}
+ul li a{
+  display:block;
+  padding: 20px 25px;
+  color:white;
+  text-decoration: none;
+  text-align: center;
+  font-size:24px;
+}
+ul li ul.dropdown li{
+  display: block;
+}
+ul li ul.dropdown{
+  width: 130px;
+  background-color: white;
+  position: absolute;
+  z-index: 999;
+  padding: 5px 4px;
+  margin: 5px 4px;
+  display: none;
+
+}
+ul li a:hover{
+  background-color: #f1f1f1;
+
+}
+ul li:hover ul.dropdown{
+  display:block;
+}
+.registration {
+  display: flex;
+  gap: 10px;
+}
+
+.loginbutton,
+.registerbutton {
+  border: none;
+  background: white;
+  cursor: pointer;
+}
+
+.registerbutton {
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+
+.menu-icon {
+  display: none;
+  cursor: pointer;
+}
+
+/* === DROPDOWNS === */
+.dropdown-container {
+  position: relative;
+}
+
+.dropdown {
+  position: absolute;
+  top: 30px;
+  background-color: white;
+  padding: 15px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  list-style: none;
+  display: none;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 999;
+}
+
+.dropdown.visible {
+  display: flex;
+}
+
+.dropdown li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.dropdown img {
+  width: 16px;
+  height: 16px;
+}
+
+.hidden {
+  display: none;
+}
+/* Default: only down arrow is visible */
+.arrow-up {
+  display: none;
+}
+.dropdown-parent:hover .arrow-down {
+  display: none;
+}
+.dropdown-parent:hover .arrow-up {
+  display: inline;
+}
+
+/* Dropdown menu hidden by default */
+.dropdown {
+  display: none;
+  position: absolute;
+  background: white;
+  list-style: none;
+  padding: 10px;
+  margin-top: 5px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Show dropdown on hover */
+.dropdown-parent:hover .dropdown {
+  display: block;
+}
+
+
+/* === MAIN CONTENT === */
+main {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-top: 50px;
+  flex-wrap: wrap;
+}
+
+.left-section {
+  max-width: 50%;
+  flex: 1;
+  padding-right: 20px;
+}
+
+.right-section {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.right-section img {
+  max-width: 50%;
+  height: auto;
+}
+
+.text-content {
+  margin-bottom: 20px;
+}
+
+h1.text-content {
+  white-space: pre-line;
+  font-size: 36px;
+  font-weight: bold;
+  text-align: left;
+}
+
+p.text-content {
+  white-space: pre-line;
+  font-size: 16px;
+  color: #555;
+  line-height: 1.6;
+}
+
+.btn {
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+/* === CLIENT LOGOS === */
+.clients {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+  gap: 10px;
+  flex-wrap: nowrap;
+}
+
+.clients img {
+  height: 30px;
+  object-fit: contain;
+}
+
+/* === FOOTER === */
+.attribution {
+  margin-top: 40px;
+  text-align: center;
+  font-size: 14px;
+}
+
+/* === MOBILE MENU === */
+.mobile-menu {
+  display: none;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: white;
+  width: 250px;
+  height: 100vh;
+  padding: 20px;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+.mobile-menu .close-btn {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 30px;
+  cursor: pointer;
+}
+
+.mobile-menu ul {
+  list-style: none;
+  padding: 0;
+}
+
+.mobile-menu li {
+  margin: 20px 0;
+  font-size: 16px;
+  font-weight: 500;
+}
+.dropbtn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #3e8e41;
+}
+
+.dropdown {
+  float: right;
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  right: 0;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown a:hover {background-color: #ddd;}
+
+.show {display: block;}
+
+/* === RESPONSIVE STYLES === */
+@media (min-width: 375px) and (max-width: 667px) {
+  body {
+    padding: 0;
+  }
+
+  .nav-items {
+    padding: 20px;
+  }
+
+  .nav-items ul,
+  .registration {
+    display: none;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  main {
+    display: flex;
+
+    flex-direction: column-reverse;
+    padding: 0;
+    margin-top: 0;
+  }
+
+  .right-section {
+    width: 100%;
+    justify-content: center;
+    background-color: #f2f2f2;
+  }
+
+  .right-section img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  .left-section {
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+  }
+
+  h1.text-content {
+    font-size: 20px;
+    white-space: nowrap;
+    text-align: left;
+    position:relative;
+    margin-left: -80px;
+
+  }
+
+  p.text-content {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    text-align: left;
+    white-space: pre-line;
+    position:relative;
+    margin-left: -80px;
+  }
+
+  .btn {
+    padding: 12px 24px;
+    font-size: 14px;
+    border-radius: 8px;
+    position:relative;
+    margin-left: -120px;
+
+  }
+
+  .clients {
+    display: flex;
+    justify-content: space-around;
+    gap: 100px;
+    margin-top: 40px;
+    flex-wrap: nowrap;
+    position: relative;
+    margin-left: -80px;
+
+  }
+
+
+  .clients img {
+      height: 24px;
+      max-width: 60px;
+      position: relative;
+      margin-left: 5px;
+      margin-right: -10px;
+      display: inline-block;
+      gap: 10px;
+  }
+
+  .attribution {
+    font-size: 12px;
+    padding: 20px;
+    text-align: center;
+  }
+  .dropdown{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+  }
+  .mobile-container{
+    display:flex
+  }
+}
+
+
+
+/* Responsive */
+@media (min-width: 375px) and (max-width: 667px) {
+  body {
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+
+  .nav-items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .nav-items ul,
+  .registration {
+    display: none;
+  }
+
+  .menu-icon {
+    display: block;
+    cursor: pointer;
+  }
+
+  main {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    padding: 0;
+    margin-top: 0;
+  }
+
+  .right-section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: #f2f2f2;
+  }
+
+  .right-section img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  .left-section {
+    width: 100%;
+    padding: 10px 10px;
+    text-align: center;
+  }
+
+  h1.text-content {
+    font-size: 20px;
+    white-space: nowrap; /* prevent text wrap */
+    text-align: left;     /* or right/center as you need */
+  }
+  
+
+  p.text-content {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    white-space: pre-line;
+  }
+
+  .btn {
+    background-color: black;
+    color: white;
+    padding: 12px 24px;
+    font-size: 14px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+
+  .clients {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin-top: 40px;
+    flex-wrap: nowrap;
+  }
+
+  .clients img {
+    height: 24px;
+    max-width: 60px;
+    object-fit: contain;
+  }
+
+  .attribution {
+    font-size: 12px;
+    padding: 20px;
+    text-align: center;
+  }
+  .dropdown-parent{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 10px;
+  }
+}
