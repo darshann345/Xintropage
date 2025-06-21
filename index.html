@@ -8,7 +8,6 @@
 </head>
 <body>
 
-  <!-- Header / Navbar -->
   <header>
     <nav class="nav-items">
       <img class="logo" src="assets/images/logo.svg" alt="snap's logo" />
@@ -20,11 +19,11 @@
             <img src="assets/images/icon-arrow-down.svg" class="arrow-down" />
             <img src="assets/images/icon-arrow-up.svg" class="arrow-up" />
           </span>
-          <ul class="dropdown">
-            <li><img src="assets/images/icon-todo.svg" alt="Todo Icon" />Todo</li>
-            <li><img src="assets/images/icon-calendar.svg" alt="Calendar Icon" />Calendar</li>
-            <li><img src="assets/images/icon-reminders.svg" alt="Reminders Icon" />Reminder</li>
-            <li><img src="assets/images/icon-planning.svg" alt="Planning Icon" />Planning</li>
+          <ul class="dropdown-list">
+            <li><a href="#" class="dropdown-link" aria-label="todo-list"><img src="assets/images/icon-todo.svg" />Todo</a></li>
+            <li><a href="#" class="dropdown-link" aria-label="calendar"><img src="assets/images/icon-calendar.svg" />Calendar</a></li>
+            <li><a href="#" class="dropdown-link" aria-label="reminders"><img src="assets/images/icon-reminders.svg" />Reminders</a></li>
+            <li><a href="#" class="dropdown-link" aria-label="planning"><img src="assets/images/icon-planning.svg" />Planning</a></li>
           </ul>
         </li>
         <li class="dropdown-parent">
@@ -33,10 +32,10 @@
             <img src="assets/images/icon-arrow-down.svg" class="arrow-down" />
             <img src="assets/images/icon-arrow-up.svg" class="arrow-up" />
           </span>
-          <ul class="dropdown">
-            <li>History</li>
-            <li>Our Team</li>
-            <li>Blog</li>
+          <ul class="dropdown-list">
+            <li><a href="#">History</a></li>
+            <li><a href="#">Our Team</a></li>
+            <li><a href="#">Blog</a></li>
           </ul>
         </li>
         <li><a href="#" class="nav-link">Careers</a></li>
@@ -48,34 +47,34 @@
         <button class="registerbutton">Register</button>
       </div>
 
-      <!-- Hamburger Icon -->
-      <div class="open-menu" onclick="openMenu()">
+      <div class="open-menu">
         <img src="assets/images/icon-menu.svg" alt="Menu Icon" />
       </div>
     </nav>
 
-    <!-- Mobile Slide-in Menu -->
+    <div class="overlay"></div>
+
     <div id="mobile-menu" class="mobile-menu">
-      <div class="close-menu" onclick="closeMenu()">
+      <div class="close-menu">
         <img src="assets/images/icon-close-menu.svg" alt="Close Icon" />
       </div>
 
       <ul>
         <li class="dropdown-parent">
           <a href="#" class="nav-link">Features</a>
-          <ul class="dropdown">
-            <li><img src="assets/images/icon-todo.svg" alt="Todo Icon" />Todo</li>
-            <li><img src="assets/images/icon-calendar.svg" alt="Calendar Icon" />Calendar</li>
-            <li><img src="assets/images/icon-reminders.svg" alt="Reminders Icon" />Reminder</li>
-            <li><img src="assets/images/icon-planning.svg" alt="Planning Icon" />Planning</li>
+          <ul class="dropdown-list">
+            <li><a href="#" aria-label="todo-list"><img src="assets/images/icon-todo.svg" />Todo</a></li>
+            <li><a href="#" aria-label="calendar"><img src="assets/images/icon-calendar.svg" />Calendar</a></li>
+            <li><a href="#" aria-label="reminders"><img src="assets/images/icon-reminders.svg" />Reminders</a></li>
+            <li><a href="#" aria-label="planning"><img src="assets/images/icon-planning.svg" />Planning</a></li>
           </ul>
         </li>
         <li class="dropdown-parent">
           <a href="#" class="nav-link">Company</a>
-          <ul class="dropdown">
-            <li>History</li>
-            <li>Our Team</li>
-            <li>Blog</li>
+          <ul class="dropdown-list">
+            <li><a href="#">History</a></li>
+            <li><a href="#">Our Team</a></li>
+            <li><a href="#">Blog</a></li>
           </ul>
         </li>
         <li><a href="#" class="nav-link">Careers</a></li>
@@ -89,19 +88,16 @@
     </div>
   </header>
 
-  <!-- Main Content -->
   <main>
     <div class="left-section">
-      <div>
+      <div class="text-content">
         <h1>Make remote work</h1>
         <p>
           Get your team in sync, no matter your location. Streamline processes,
           create team rituals, and watch productivity soar.
         </p>
       </div>
-
       <button class="btn">Learn More</button>
-
       <div class="clients">
         <img src="assets/images/client-databiz.svg" alt="Databiz logo" />
         <img src="assets/images/client-audiophile.svg" alt="Audiophile logo" />
@@ -120,7 +116,7 @@
 
   <footer>
     <div class="attribution">
-      Challenge by <a href="https://crio.do" target="_blank">crio.do</a>. 
+      Challenge by <a href="https://crio.do" target="_blank">crio.do</a>.
       Coded by <a href="https://github.com/darshann345" target="_blank">Darshan N</a>.
     </div>
   </footer>
