@@ -1,139 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="index.css" />
-    <title>Intro Section</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="index.css" />
+  <title>Intro Section</title>
 </head>
-
 <body>
 
-    <!-- Header / Navbar -->
-    <header>
-        <nav class="nav-items">
-            <img class="logo" src="assets/images/logo.svg" alt="snap's logo" />
+  <!-- Header / Navbar -->
+  <header>
+    <nav class="nav-items">
+      <img class="logo" src="assets/images/logo.svg" alt="snap's logo" />
 
-            <ul>
-                <li class="dropdown-parent">
-                    <a href="#" class="nav-link">Features</a>
-                    <span class="arrow-icons">
-                        <img src="assets/images/icon-arrow-down.svg" class="arrow-down" />
-                        <img src="assets/images/icon-arrow-up.svg" class="arrow-up" />
-                    </span>
-                    <ul class="dropdown">
-                        <li><img src="assets/images/icon-todo.svg" alt="Todo Icon" />Todo</li>
-                        <li><img src="assets/images/icon-calendar.svg" alt="Calendar Icon" />Calendar</li>
-                        <li><img src="assets/images/icon-reminders.svg" alt="Reminders Icon" />Reminder</li>
-                        <li><img src="assets/images/icon-planning.svg" alt="Planning Icon" />Planning</li>
-                    </ul>
-                </li>
-                <li class="dropdown-parent">
-                    <a href="#" class="nav-link">Company</a>
-                    <span class="arrow-icons">
-                        <img src="assets/images/icon-arrow-down.svg" class="arrow-down" />
-                        <img src="assets/images/icon-arrow-up.svg" class="arrow-up" />
-                    </span>
-                    <ul class="dropdown">
-                        <li>History</li>
-                        <li>Our Team</li>
-                        <li>Blog</li>
-                    </ul>
-                </li>
-                <li><a href="#" class="nav-link">Careers</a></li>
-                <li><a href="#" class="nav-link">About</a></li>
-            </ul>
+      <ul class="nav-links">
+        <li class="dropdown-parent">
+          <a href="#" class="nav-link">Features</a>
+          <span class="arrow-icons">
+            <img src="assets/images/icon-arrow-down.svg" class="arrow-down" />
+            <img src="assets/images/icon-arrow-up.svg" class="arrow-up" />
+          </span>
+          <ul class="dropdown">
+            <li><img src="assets/images/icon-todo.svg" alt="Todo Icon" />Todo</li>
+            <li><img src="assets/images/icon-calendar.svg" alt="Calendar Icon" />Calendar</li>
+            <li><img src="assets/images/icon-reminders.svg" alt="Reminders Icon" />Reminder</li>
+            <li><img src="assets/images/icon-planning.svg" alt="Planning Icon" />Planning</li>
+          </ul>
+        </li>
+        <li class="dropdown-parent">
+          <a href="#" class="nav-link">Company</a>
+          <span class="arrow-icons">
+            <img src="assets/images/icon-arrow-down.svg" class="arrow-down" />
+            <img src="assets/images/icon-arrow-up.svg" class="arrow-up" />
+          </span>
+          <ul class="dropdown">
+            <li>History</li>
+            <li>Our Team</li>
+            <li>Blog</li>
+          </ul>
+        </li>
+        <li><a href="#" class="nav-link">Careers</a></li>
+        <li><a href="#" class="nav-link">About</a></li>
+      </ul>
 
-            <div class="registration">
-                <button class="loginbutton">Login</button>
-                <button class="registerbutton">Register</button>
-            </div>
+      <div class="registration">
+        <button class="loginbutton">Login</button>
+        <button class="registerbutton">Register</button>
+      </div>
 
-            <!-- Hamburger Icon -->
-            <div class="open-menu" onclick="openMenu()">
-                <img src="assets/images/icon-menu.svg" alt="Menu Icon" />
-            </div>
-        </nav>
+      <!-- Hamburger Icon -->
+      <div class="open-menu" onclick="openMenu()">
+        <img src="assets/images/icon-menu.svg" alt="Menu Icon" />
+      </div>
+    </nav>
 
-        <!-- Mobile Slide-in Menu -->
-        <div id="mobile-menu" class="mobile-menu">
-            <!-- <div class="overlay" onclick="closeMenu()">
-                <img src="assets/images/icon-close-menu.svg" alt="Close Icon" />
-            </div> -->
-            <div class="close-menu" onclick="closeMenu()">
-  <img src="assets/images/icon-close-menu.svg" alt="Close Icon" />
-</div>
+    <!-- Mobile Slide-in Menu -->
+    <div id="mobile-menu" class="mobile-menu">
+      <div class="close-menu" onclick="closeMenu()">
+        <img src="assets/images/icon-close-menu.svg" alt="Close Icon" />
+      </div>
 
+      <ul>
+        <li class="dropdown-parent">
+          <a href="#" class="nav-link">Features</a>
+          <ul class="dropdown">
+            <li><img src="assets/images/icon-todo.svg" alt="Todo Icon" />Todo</li>
+            <li><img src="assets/images/icon-calendar.svg" alt="Calendar Icon" />Calendar</li>
+            <li><img src="assets/images/icon-reminders.svg" alt="Reminders Icon" />Reminder</li>
+            <li><img src="assets/images/icon-planning.svg" alt="Planning Icon" />Planning</li>
+          </ul>
+        </li>
+        <li class="dropdown-parent">
+          <a href="#" class="nav-link">Company</a>
+          <ul class="dropdown">
+            <li>History</li>
+            <li>Our Team</li>
+            <li>Blog</li>
+          </ul>
+        </li>
+        <li><a href="#" class="nav-link">Careers</a></li>
+        <li><a href="#" class="nav-link">About</a></li>
+      </ul>
 
-            <!-- <div class="close-btn" onclick="closeMenu()">
-      </div> -->
-            <ul>
-                <li class="dropdown-parent">
-                    <a href="#" class="nav-link">Features</a>
-                    <ul class="dropdown">
-                        <li><img src="assets/images/icon-todo.svg" alt="Todo Icon" />Todo</li>
-                        <li><img src="assets/images/icon-calendar.svg" alt="Calendar Icon" />Calendar</li>
-                        <li><img src="assets/images/icon-reminders.svg" alt="Reminders Icon" />Reminder</li>
-                        <li><img src="assets/images/icon-planning.svg" alt="Planning Icon" />Planning</li>
-                    </ul>
-                </li>
-                <li class="dropdown-parent">
-                    <a href="#" class="nav-link">Company</a>
-                    <ul class="dropdown">
-                        <li>History</li>
-                        <li>Our Team</li>
-                        <li>Blog</li>
-                    </ul>
-                </li>
-                <li><a href="#" class="nav-link">Careers</a></li>
-                <li><a href="#" class="nav-link">About</a></li>
-            </ul>
-            <div class="registration mobile">
-                <button class="loginbutton">Login</button>
-                <button class="registerbutton">Register</button>
-            </div>
-        </div>
-    </header>
+      <div class="registration mobile">
+        <button class="loginbutton">Login</button>
+        <button class="registerbutton">Register</button>
+      </div>
+    </div>
+  </header>
 
-    <!-- Main Content -->
-    <main>
-        <div class="left-section">
-            <div>
-                <h1>Make remote work</h1>
-                <p>
-                    Get your team in sync, no matter your location. Streamline
-                    processes, create team rituals, and watch productivity soar.
-                </p>
-            </div>
+  <!-- Main Content -->
+  <main>
+    <div class="left-section">
+      <div>
+        <h1>Make remote work</h1>
+        <p>
+          Get your team in sync, no matter your location. Streamline processes,
+          create team rituals, and watch productivity soar.
+        </p>
+      </div>
 
+      <button class="btn">Learn More</button>
 
-            <button class="btn">Learn More</button>
+      <div class="clients">
+        <img src="assets/images/client-databiz.svg" alt="Databiz logo" />
+        <img src="assets/images/client-audiophile.svg" alt="Audiophile logo" />
+        <img src="assets/images/client-meet.svg" alt="Meet logo" />
+        <img src="assets/images/client-maker.svg" alt="Maker logo" />
+      </div>
+    </div>
 
-            <div class="clients">
-                <img src="assets/images/client-databiz.svg" alt="Databiz logo" />
-                <img src="assets/images/client-audiophile.svg" alt="Audiophile logo" />
-                <img src="assets/images/client-meet.svg" alt="Meet logo" />
-                <img src="assets/images/client-maker.svg" alt="Maker logo" />
-            </div>
-        </div>
+    <div class="right-section">
+      <picture>
+        <source media="(max-width: 768px)" srcset="assets/images/image-hero-mobile.png" />
+        <img src="assets/images/image-hero-desktop.png" alt="Hero Image" />
+      </picture>
+    </div>
+  </main>
 
-        <div class="right-section">
-            <picture>
-                <source media="(max-width: 768px)" srcset="assets/images/image-hero-mobile.png" />
-                <img src="assets/images/image-hero-desktop.png" alt="Hero Image" />
-            </picture>
-        </div>
-    </main>
+  <footer>
+    <div class="attribution">
+      Challenge by <a href="https://crio.do" target="_blank">crio.do</a>. 
+      Coded by <a href="https://github.com/darshann345" target="_blank">Darshan N</a>.
+    </div>
+  </footer>
 
-    <footer>
-        <div class="attribution">
-            Challenge by <a href="https://crio.do" target="_blank">crio.do</a>.
-            Coded by <a href="https://github.com/darshann345" target="_blank">Darshan N</a>.
-        </div>
-    </footer>
-
-    <script src="index.js"></script>
+  <script src="index.js"></script>
 </body>
-
 </html>
