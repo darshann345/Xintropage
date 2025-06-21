@@ -8,5 +8,12 @@ function closeMenu() {
   document.querySelector(".overlay").style.display = "none";
 }
 
-document.getElementById("open-button").addEventListener("click", openMenu);
-document.getElementById("close-button").addEventListener("click", closeMenu);
+const openBtn = document.getElementById("open-button");
+if (openBtn) {
+  openBtn.addEventListener("click", openMenu);
+}
+
+const closeBtn = document.getElementById("close-button");
+if (closeBtn) {
+  closeBtn.addEventListener("click", closeMenu);
+}
