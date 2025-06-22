@@ -18,3 +18,11 @@ document.querySelector('.close-menu').addEventListener('click', () => {
   overlay.classList.remove('show');
   overlay.style.opacity = "0";
 });
+function openMenu() {
+  document.getElementById("mobile-menu").style.display = "block";
+}
+
+function closeMenu() {
+  document.getElementById("mobile-menu").style.display = "none";
+}
+

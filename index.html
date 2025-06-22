@@ -1,37 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="index.css" />
   <title>Intro Section</title>
 </head>
+
 <body>
   <!-- Header -->
   <header>
     <nav class="nav-items">
-<img class="logo" src="assets/images/logo.svg" alt="snap's logo" />
+      <img class="logo" src="assets/images/logo.svg" alt="snap's logo" />
 
       <ul class="nav-links">
         <li class="nav-link dropdown-parent">
           <a href="#" aria-haspopup="true" aria-expanded="false">
             Features <img class="arrow" src="assets/images/icon-arrow-down.svg" alt="Toggle dropdown" />
           </a>
+
           <ul class="dropdown">
-            <li class = "dropdown-list"><img src="assets/images/icon-todo.svg" alt="Todo icon" /><a href="#">Todo List</a></li>
-            <li class = "dropdown-list"><img src="assets/images/icon-calendar.svg" alt="Calendar icon" /><a href="#">Calendar</a></li>
-            <li class = "dropdown-list"><img src="assets/images/icon-reminders.svg" alt="Reminders icon" /><a href="#">Reminders</a></li>
-            <li class = "dropdown-list"><img src="assets/images/icon-planning.svg" alt="Planning icon" /><a href="#">Planning</a></li>
+            <li class="dropdown-link">
+              <img src="assets/images/icon-todo.svg" alt="Todo icon" />
+              <a href="#" aria-label="Todo List">Todo List</a>
+            </li>
+            <li class="dropdown-link">
+              <img src="assets/images/icon-calendar.svg" alt="Calendar icon" />
+              <a href="#" aria-label="Calendar">Calendar</a>
+            </li>
+            <li class="dropdown-link">
+              <img src="assets/images/icon-reminders.svg" alt="Reminders icon" />
+              <a href="#" aria-label="Reminders">Reminders</a>
+            </li>
+            <li class="dropdown-link">
+              <img src="assets/images/icon-planning.svg" alt="Planning icon" />
+              <a href="#" aria-label="Planning">Planning</a>
+            </li>
           </ul>
+
         </li>
         <li class="nav-link dropdown-parent">
           <a href="#" aria-haspopup="true" aria-expanded="false">
             Company <img class="arrow" src="assets/images/icon-arrow-down.svg" alt="Toggle dropdown" />
           </a>
-          <ul class="dropdown-list">
-            <li><a href="#">History</a></li>
-            <li><a href="#">Our Team</a></li>
-            <li><a href="#">Blog</a></li>
+          <ul class="dropdown">
+            <li class="dropdown-link"><a href="#" aria-label="History">History</a></li>
+            <li class="dropdown-link"><a href="#" aria-label="Our Team">Our Team</a></li>
+            <li class="dropdown-link"><a href="#" aria-label="Blog">Blog</a></li>
           </ul>
         </li>
         <li><a href="#">Careers</a></li>
@@ -56,20 +72,33 @@
       <ul>
         <li class="dropdown-parent">
           <a href="#">Features</a>
-          <ul class="dropdown">
-            <li class="dropdown-link"><img src="assets/images/icon-todo.svg" alt="Todo icon" /><a href="#">Todo List</a></li>
-<li class="dropdown-link"><img src="assets/images/icon-calendar.svg" alt="Calendar icon" /><a href="#">Calendar</a></li>
-<li class="dropdown-link"><img src="assets/images/icon-reminders.svg" alt="Reminders icon" /><a href="#">Reminders</a></li>
-<li class="dropdown-link"><img src="assets/images/icon-planning.svg" alt="Planning icon" /><a href="#">Planning</a></li>
 
+          <ul class="dropdown">
+            <li class="dropdown-link">
+              <img src="assets/images/icon-todo.svg" alt="Todo icon" />
+              <a href="#" aria-label="Todo List">Todo List</a>
+            </li>
+            <li class="dropdown-link">
+              <img src="assets/images/icon-calendar.svg" alt="Calendar icon" />
+              <a href="#" aria-label="Calendar">Calendar</a>
+            </li>
+            <li class="dropdown-link">
+              <img src="assets/images/icon-reminders.svg" alt="Reminders icon" />
+              <a href="#" aria-label="Reminders">Reminders</a>
+            </li>
+            <li class="dropdown-link">
+              <img src="assets/images/icon-planning.svg" alt="Planning icon" />
+              <a href="#" aria-label="Planning">Planning</a>
+            </li>
           </ul>
+
         </li>
         <li class="dropdown-parent">
           <a href="#">Company</a>
           <ul class="dropdown">
-            <li>History</li>
-            <li>Our Team</li>
-            <li>Blog</li>
+            <li class = "dropdown-link"><a href="#" aria-label="History">History</a></li>
+            <li class = "dropdown-link"><a href="#" aria-label="Our Team">Our Team</a></li>
+            <li class = "dropdown-link"><a href="#" aria-label="Blog">Blog</a></li>
           </ul>
         </li>
         <li><a href="#">Careers</a></li>
@@ -87,7 +116,8 @@
   <main>
     <div class="text-content">
       <h1>Make remote work</h1>
-      <p>Get your team in sync, no matter your location. Streamline processes, create team rituals, and watch productivity soar.</p>
+      <p>Get your team in sync, no matter your location. Streamline processes, create team rituals, and watch
+        productivity soar.</p>
       <button class="cta">Learn More</button>
       <div class="clients">
         <img src="assets/images/client-databiz.svg" alt="Databiz client logo" />
@@ -110,4 +140,5 @@
 
   <script src="index.js"></script>
 </body>
+
 </html>
