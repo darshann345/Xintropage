@@ -1,9 +1,7 @@
-// Dropdown menu toggle for desktop and mobile
 document.querySelectorAll('.dropdown-parent').forEach(parent => {
   parent.addEventListener('click', (e) => {
     e.preventDefault();
 
-    // Close other open dropdowns
     document.querySelectorAll('.dropdown-parent').forEach(other => {
       if (other !== parent) {
         other.classList.remove('link-open');
@@ -14,13 +12,12 @@ document.querySelectorAll('.dropdown-parent').forEach(parent => {
       }
     });
 
-    // Toggle current dropdown
     const dropdown = parent.querySelector('.dropdown, .dropdown-list');
     const arrow = parent.querySelector('.arrow');
     const isOpen = parent.classList.toggle('link-open');
 
     if (dropdown) {
-      dropdown.classList.toggle('visible', isOpen); // Cypress-friendly
+      dropdown.classList.toggle('visible', isOpen);
     }
     if (arrow) {
       arrow.src = isOpen
@@ -30,7 +27,6 @@ document.querySelectorAll('.dropdown-parent').forEach(parent => {
   });
 });
 
-// Open mobile menu
 function openMenu() {
   const mobileMenu = document.getElementById("mobile-menu");
   mobileMenu.classList.add("active");
@@ -38,9 +34,15 @@ function openMenu() {
   if (!document.querySelector('.overlay')) {
     const overlay = document.createElement('div');
     overlay.className = 'overlay show';
-    overlay.style.zIndex = '9999'; 
-    overlay.addEventListener('click', closeMenu);
+    overlay.style.zIndex = '9000'; 
     document.body.appendChild(overlay);
+    overlay.addEventListener('click', closeMenu);
+  }
+
+  const closeBtn = document.querySelector('.close-menu');
+  if (closeBtn) {
+    closeBtn.style.zIndex = '10001';
+    closeBtn.style.position = 'relative';
   }
 }
 
