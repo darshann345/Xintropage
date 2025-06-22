@@ -7,36 +7,24 @@
   <title>Intro Section</title>
 </head>
 <body>
-  <!-- Header -->
   <header>
     <nav class="nav-items">
       <img class="logo" src="assets/images/logo.svg" alt="snap's logo" />
-
       <ul class="nav-links">
+        <!-- Dropdown: Features -->
         <li class="nav-link dropdown-parent">
           <a href="#" aria-haspopup="true" aria-expanded="false">
             Features <img class="arrow" src="assets/images/icon-arrow-down.svg" alt="Toggle dropdown" />
           </a>
           <ul class="dropdown-list">
-            <li class="dropdown-link">
-              <img src="assets/images/icon-todo.svg" alt="Todo icon" />
-              <a href="#" aria-label="todo-list">todo-list</a>
-            </li>
-            <li class="dropdown-link">
-              <img src="assets/images/icon-calendar.svg" alt="Calendar icon" />
-              <a href="#" aria-label="Calendar">Calendar</a>
-            </li>
-            <li class="dropdown-link">
-              <img src="assets/images/icon-reminders.svg" alt="Reminders icon" />
-              <a href="#" aria-label="Reminders">Reminders</a>
-            </li>
-            <li class="dropdown-link">
-              <img src="assets/images/icon-planning.svg" alt="Planning icon" />
-              <a href="#" aria-label="Planning">Planning</a>
-            </li>
+            <li class="dropdown-link"><img src="assets/images/icon-todo.svg" alt="Todo icon" /><a href="#">todo-list</a></li>
+            <li class="dropdown-link"><img src="assets/images/icon-calendar.svg" alt="Calendar icon" /><a href="#">Calendar</a></li>
+            <li class="dropdown-link"><img src="assets/images/icon-reminders.svg" alt="Reminders icon" /><a href="#">Reminders</a></li>
+            <li class="dropdown-link"><img src="assets/images/icon-planning.svg" alt="Planning icon" /><a href="#">Planning</a></li>
           </ul>
         </li>
 
+        <!-- Dropdown: Company -->
         <li class="nav-link dropdown-parent">
           <a href="#" aria-haspopup="true" aria-expanded="false">
             Company <img class="arrow" src="assets/images/icon-arrow-down.svg" alt="Toggle dropdown" />
@@ -62,52 +50,37 @@
       </div>
     </nav>
 
+    <!-- Static overlay for Cypress compatibility -->
     <div class="overlay" onclick="closeMenu()"></div>
+
+    <!-- Mobile Menu -->
     <div id="mobile-menu" class="mobile-menu">
       <div class="close-menu" onclick="closeMenu()">
         <img src="assets/images/icon-close-menu.svg" alt="Close Icon" />
       </div>
-
       <ul>
+        <!-- Features -->
         <li class="dropdown-parent">
-          <a href="#" aria-haspopup="true" aria-expanded="false">
-            Features <img class="arrow" src="assets/images/icon-arrow-down.svg" alt="Toggle dropdown" />
-          </a>
+          <a href="#"><span>Features</span><img class="arrow" src="assets/images/icon-arrow-down.svg" alt="" /></a>
           <ul class="dropdown-list">
-            <li class="dropdown-link">
-              <img src="assets/images/icon-todo.svg" alt="Todo icon" />
-              <a href="#" aria-label="Todo List">Todo List</a>
-            </li>
-            <li class="dropdown-link">
-              <img src="assets/images/icon-calendar.svg" alt="Calendar icon" />
-              <a href="#" aria-label="Calendar">Calendar</a>
-            </li>
-            <li class="dropdown-link">
-              <img src="assets/images/icon-reminders.svg" alt="Reminders icon" />
-              <a href="#" aria-label="Reminders">Reminders</a>
-            </li>
-            <li class="dropdown-link">
-              <img src="assets/images/icon-planning.svg" alt="Planning icon" />
-              <a href="#" aria-label="Planning">Planning</a>
-            </li>
+            <li class="dropdown-link"><img src="assets/images/icon-todo.svg" alt="Todo" /><a href="#">Todo List</a></li>
+            <li class="dropdown-link"><img src="assets/images/icon-calendar.svg" alt="Calendar" /><a href="#">Calendar</a></li>
+            <li class="dropdown-link"><img src="assets/images/icon-reminders.svg" alt="Reminders" /><a href="#">Reminders</a></li>
+            <li class="dropdown-link"><img src="assets/images/icon-planning.svg" alt="Planning" /><a href="#">Planning</a></li>
           </ul>
         </li>
-
+        <!-- Company -->
         <li class="dropdown-parent">
-          <a href="#" aria-haspopup="true" aria-expanded="false">
-            Company <img class="arrow" src="assets/images/icon-arrow-down.svg" alt="Toggle dropdown" />
-          </a>
+          <a href="#"><span>Company</span><img class="arrow" src="assets/images/icon-arrow-down.svg" alt="" /></a>
           <ul class="dropdown-list">
             <li><a href="#">History</a></li>
             <li><a href="#">Our Team</a></li>
             <li><a href="#">Blog</a></li>
           </ul>
         </li>
-
         <li><a href="#">Careers</a></li>
         <li><a href="#">About</a></li>
       </ul>
-
       <div class="registration mobile">
         <button class="loginbutton">Login</button>
         <button class="registerbutton">Register</button>
@@ -115,29 +88,26 @@
     </div>
   </header>
 
-  <!-- Main Content -->
   <main class="main-content">
     <div class="text-content">
       <h1>Make remote work</h1>
-      <p>Get your team in sync, no matter your location. Streamline processes, create team rituals, and watch productivity soar.</p>
+      <p>Get your team in sync, no matter your location...</p>
       <button class="cta">Learn More</button>
       <div class="clients">
-        <img src="assets/images/client-databiz.svg" alt="Databiz logo" />
-        <img src="assets/images/client-audiophile.svg" alt="Audiophile logo" />
-        <img src="assets/images/client-meet.svg" alt="Meet logo" />
-        <img src="assets/images/client-maker.svg" alt="Maker logo" />
+        <img src="assets/images/client-databiz.svg" alt="Databiz" />
+        <img src="assets/images/client-audiophile.svg" alt="Audiophile" />
+        <img src="assets/images/client-meet.svg" alt="Meet" />
+        <img src="assets/images/client-maker.svg" alt="Maker" />
       </div>
     </div>
-
     <picture>
       <source media="(min-width: 768px)" srcset="assets/images/image-hero-desktop.png" />
-      <img src="assets/images/image-hero-mobile.png" alt="Hero image" />
+      <img src="assets/images/image-hero-mobile.png" alt="Hero" />
     </picture>
   </main>
 
-  <!-- Footer -->
   <footer class="attribution">
-    Challenge by <a href="https://crio.do" target="_blank" rel="noopener noreferrer">Crio.do</a>. Coded by Ketan.
+    Challenge by <a href="https://crio.do" target="_blank">Crio.do</a>. Coded by Ketan.
   </footer>
 
   <script src="index.js"></script>

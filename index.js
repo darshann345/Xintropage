@@ -23,36 +23,15 @@ document.querySelectorAll('.dropdown-parent > a').forEach(anchor => {
 });
 
 function openMenu() {
-  const mobileMenu = document.getElementById("mobile-menu");
-  mobileMenu.classList.add("active");
-
-  let overlay = document.querySelector('.overlay');
-  if (!overlay) {
-    overlay = document.createElement('div');
-    overlay.className = 'overlay show';
-    overlay.style.zIndex = '9999';
-    document.body.appendChild(overlay);
-    overlay.addEventListener('click', closeMenu);
-  } else {
-    overlay.classList.add('show');
-  }
-
-  const closeBtn = document.querySelector('.close-menu');
-  if (closeBtn) {
-    closeBtn.style.zIndex = '10000';
-    closeBtn.style.position = 'relative';
-  }
+  document.getElementById("mobile-menu").classList.add("active");
+  const overlay = document.querySelector('.overlay');
+  if (overlay) overlay.classList.add('show');
 }
 
 function closeMenu() {
-  const mobileMenu = document.getElementById("mobile-menu");
-  mobileMenu.classList.remove("active");
-
+  document.getElementById("mobile-menu").classList.remove("active");
   const overlay = document.querySelector('.overlay');
-  if (overlay) {
-    overlay.classList.remove('show');
-    setTimeout(() => overlay.remove(), 300); 
-  }
+  if (overlay) overlay.classList.remove('show');
 
   document.querySelectorAll('.dropdown-parent').forEach(parent => {
     parent.classList.remove('link-open');
