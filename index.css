@@ -101,7 +101,14 @@ picture img {
   opacity: 0;
   transition: opacity 0.3s;
 }
-
+.nav-link.dropdown-parent,
+.dropdown-link {
+  text-decoration: none;
+}
+.overlay.show {
+  display: flex;
+  opacity: 1;
+}
 .open-menu, .close-menu {
   display: none;
   font-size: 24px;
@@ -114,6 +121,27 @@ picture img {
   align-items: center;
   gap: 20px;
 }
+.attribution{
+  display: flex;
+  justify-content: center;
+}
+
+.dropdown, .dropdown-list {
+  list-style: none; 
+  padding: 0;
+  margin: 0;
+}
+
+.dropdown a,
+.dropdown-list a {
+  text-decoration: none;
+  color: inherit;
+}
+.nav-links > li > a {
+  text-decoration: none;
+  color: inherit; 
+}
+
 
 /* Responsive */
 @media screen and (max-width: 768px) {
