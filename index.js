@@ -23,17 +23,26 @@ document.querySelectorAll('.dropdown-parent > a').forEach(anchor => {
 });
 
 function openMenu() {
-  document.getElementById("mobile-menu").classList.add("active");
+  const mobileMenu = document.getElementById("mobile-menu");
+  if (mobileMenu) {
+    mobileMenu.classList.add("active"); 
+  }
   const overlay = document.querySelector('.overlay');
-  if (overlay) overlay.classList.add('show');
+  if (overlay) {
+    overlay.classList.add('show');
+    overlay.style.display = 'block';
+  }
 }
 
 function closeMenu() {
-  document.getElementById("mobile-menu").classList.remove("active");
+  const mobileMenu = document.getElementById("mobile-menu");
+  if (mobileMenu) {
+    mobileMenu.classList.remove("active");
+  }
   const overlay = document.querySelector('.overlay');
   if (overlay) {
-    overlay.classList.remove('show');
-    overlay.style.display = 'none'; // Ensure overlay is hidden
+    overlay.classList.remove('show'); 
+    overlay.style.display = 'none';
   }
 
   document.querySelectorAll('.dropdown-parent').forEach(parent => {
@@ -44,4 +53,3 @@ function closeMenu() {
     if (arrow) arrow.src = 'assets/images/icon-arrow-down.svg';
   });
 }
-

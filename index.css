@@ -10,7 +10,6 @@ body {
   line-height: 1.5;
 }
 
-/* Navigation */
 .nav-items {
   display: flex;
   justify-content: space-between;
@@ -37,7 +36,6 @@ body {
   color: inherit;
 }
 
-/* Dropdown Menus */
 .dropdown,
 .dropdown-list {
   display: none;
@@ -59,7 +57,6 @@ body {
   display: block;
 }
 
-/* Registration Buttons */
 .registration button {
   margin-left: 10px;
   border: 1px solid black;
@@ -69,7 +66,6 @@ body {
   cursor: pointer;
 }
 
-/* Main Content */
 .main-content {
   display: flex;
   justify-content: space-between;
@@ -101,7 +97,6 @@ body {
   cursor: pointer;
 }
 
-/* Clients Section */
 .clients {
   display: flex;
   justify-content: space-between;
@@ -114,20 +109,17 @@ body {
   width: auto;
 }
 
-/* Hero Image */
 picture img {
   width: 100%;
   max-width: 400px;
 }
 
-/* Footer */
 .attribution {
   display: flex;
   justify-content: center;
   margin-top: 40px;
 }
 
-/* Arrow Toggle */
 .arrow {
   transition: transform 0.3s ease;
 }
@@ -135,14 +127,13 @@ picture img {
   transform: rotate(180deg);
 }
 
-/* Overlay */
 .overlay {
   position: fixed;
   top: 0; left: 0;
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.5);
-  z-index: 9999; /* LOWER than close-menu */
+  z-index: 999;
   display: none;
 }
 
@@ -152,10 +143,9 @@ picture img {
 
 .close-menu {
   position: relative;
-  z-index: 10000;   
+  z-index: 1000;
 }
 
-/* Mobile Menu */
 .mobile-menu {
   display: none;
   position: fixed;
@@ -191,7 +181,6 @@ picture img {
   font-size: 18px;
 }
 
-/* Mobile Registration Buttons */
 .registration.mobile {
   display: none;
   flex-direction: column;
@@ -213,7 +202,6 @@ picture img {
   cursor: pointer;
 }
 
-/* Menu Icons */
 .open-menu,
 .close-menu {
   display: none;
@@ -236,7 +224,7 @@ picture img {
   }
 
   .close-menu {
-    display: block;
+    display: block; 
     align-self: flex-end;
     margin-bottom: 20px;
   }
