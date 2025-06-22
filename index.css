@@ -107,6 +107,13 @@ picture img {
   font-size: 24px;
   cursor: pointer;
 }
+.main-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
 
 /* Responsive */
 @media screen and (max-width: 768px) {
