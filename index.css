@@ -129,17 +129,19 @@ picture img {
 
 .overlay {
   position: fixed;
-  top: 0; left: 0;
+  top: 0; 
+  left: 0;
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.5);
-  z-index: 999;
+  z-index: 9999;
   display: none;
 }
 
 .overlay.show {
   display: block;
 }
+
 
 .close-menu {
   position: relative;
@@ -193,14 +195,16 @@ picture img {
 }
 
 .loginbutton,
-.registerbutton {
-  padding: 10px;
-  border-radius: 6px;
+.registration button {
+  margin-left: 10px;
   border: 1px solid black;
+  padding: 5px 10px;
   background: white;
-  font-size: 16px;
+  border-radius: 12px;
   cursor: pointer;
+  z-index: 1000; 
 }
+
 
 .open-menu,
 .close-menu {

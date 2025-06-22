@@ -25,7 +25,7 @@ document.querySelectorAll('.dropdown-parent > a').forEach(anchor => {
 function openMenu() {
   const mobileMenu = document.getElementById("mobile-menu");
   if (mobileMenu) {
-    mobileMenu.classList.add("active"); 
+    mobileMenu.classList.add("active");
   }
   const overlay = document.querySelector('.overlay');
   if (overlay) {
