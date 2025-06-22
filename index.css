@@ -7,6 +7,7 @@
 body {
   font-family: sans-serif;
   padding: 20px;
+  line-height: 1.5;
 }
 
 .nav-items {
@@ -30,7 +31,7 @@ body {
   cursor: pointer;
 }
 
-.dropdown-list {
+.dropdown, .dropdown-list {
   display: none;
   position: absolute;
   top: 40px;
@@ -39,18 +40,39 @@ body {
   padding: 10px;
   border-radius: 8px;
   z-index: 1000;
+  list-style: none;
 }
 
+.nav-link.link-open .dropdown,
 .nav-link.link-open .dropdown-list {
   display: block;
 }
 
+/* Remove Bullets & Underlines */
+.dropdown a,
+.dropdown-list a,
+.nav-links > li > a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Registration Buttons */
 .registration button {
   margin-left: 10px;
   border: 1px solid black;
   padding: 5px 10px;
   background: white;
   border-radius: 12px;
+  cursor: pointer;
+}
+
+/* Main Content */
+.main-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
 .text-content {
@@ -73,6 +95,7 @@ body {
   border: none;
   padding: 10px 20px;
   border-radius: 8px;
+  cursor: pointer;
 }
 
 .clients {
@@ -87,11 +110,28 @@ body {
   width: auto;
 }
 
+/* Hero Image */
 picture img {
   width: 100%;
   max-width: 400px;
 }
 
+/* Footer */
+.attribution {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+/* Arrow Transition */
+.arrow {
+  transition: transform 0.3s ease;
+}
+.link-open .arrow {
+  transform: rotate(180deg);
+}
+
+/* Overlay for Mobile Menu */
 .overlay {
   display: none;
   position: fixed;
@@ -100,61 +140,110 @@ picture img {
   background: rgba(0,0,0,0.6);
   opacity: 0;
   transition: opacity 0.3s;
-}
-.nav-link.dropdown-parent,
-.dropdown-link {
-  text-decoration: none;
+  z-index: 900;
 }
 .overlay.show {
   display: flex;
   opacity: 1;
 }
+
+.mobile-menu {
+  display: none;
+  position: fixed;
+  top: 0; right: 0;
+  width: 70%;
+  height: 100%;
+  background-color: white;
+  padding: 30px 20px;
+  box-shadow: -4px 0 8px rgba(0, 0, 0, 0.2);
+  z-index: 1100;
+  flex-direction: column;
+  gap: 20px;
+  overflow-y: auto;
+}
+.mobile-menu.active {
+  display: flex;
+}
+
+.mobile-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.mobile-menu li a {
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+}
+
+.registration.mobile {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.loginbutton,
+.registerbutton {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid black;
+  background: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Menu Icons */
 .open-menu, .close-menu {
   display: none;
   font-size: 24px;
   cursor: pointer;
 }
-.main-content {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  gap: 20px;
-}
-.attribution{
-  display: flex;
-  justify-content: center;
-}
 
-.dropdown, .dropdown-list {
-  list-style: none; 
-  padding: 0;
-  margin: 0;
-}
-
-.dropdown a,
-.dropdown-list a {
-  text-decoration: none;
-  color: inherit;
-}
-.nav-links > li > a {
-  text-decoration: none;
-  color: inherit; 
-}
-
-
-/* Responsive */
 @media screen and (max-width: 768px) {
   .nav-links {
     display: none;
   }
+
   .open-menu {
     display: block;
   }
+
+  .main-content {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+  }
+
   .overlay.show {
     display: flex;
     opacity: 1;
     justify-content: center;
     align-items: center;
   }
+
+  .close-menu {
+    display: block;
+    align-self: flex-end;
+    margin-bottom: 20px;
+  }
+  .registration {
+    display: none;
+  }
+
+  .mobile-menu.active .registration.mobile {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  .dropdown,
+.dropdown-list {
+  display: none;
 }
+
+}
+
+
