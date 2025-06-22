@@ -31,7 +31,10 @@ function openMenu() {
 function closeMenu() {
   document.getElementById("mobile-menu").classList.remove("active");
   const overlay = document.querySelector('.overlay');
-  if (overlay) overlay.classList.remove('show');
+  if (overlay) {
+    overlay.classList.remove('show');
+    overlay.style.display = 'none'; // Ensure overlay is hidden
+  }
 
   document.querySelectorAll('.dropdown-parent').forEach(parent => {
     parent.classList.remove('link-open');
@@ -41,3 +44,4 @@ function closeMenu() {
     if (arrow) arrow.src = 'assets/images/icon-arrow-down.svg';
   });
 }
+
